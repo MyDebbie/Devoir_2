@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Net;
-using System.Net.NetworkInformation;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using System.Drawing;
 
 namespace Film
 {
+    /// <summary>
+    /// Nom : Dimanche Mydleyka
+    /// Devoir2
+    /// </summary>
     public class Film
     {
 
@@ -41,5 +37,8 @@ namespace Film
         {
             _genre_ids = value;
         }
+
+        public Image image { get; set; }
+
     }
 }

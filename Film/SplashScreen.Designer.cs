@@ -29,8 +29,10 @@ namespace Film
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbSplashscreen = new System.Windows.Forms.ProgressBar();
             this.lbMovie = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pbSplashscreen
@@ -42,7 +44,7 @@ namespace Film
             // 
             // lbMovie
             // 
-            this.lbMovie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbMovie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lbMovie.AutoSize = true;
             this.lbMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -52,6 +54,11 @@ namespace Film
             this.lbMovie.Size = new System.Drawing.Size(183, 59);
             this.lbMovie.TabIndex = 2;
             this.lbMovie.Text = "Movie";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // SplashScreen
             // 
@@ -67,7 +74,6 @@ namespace Film
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
-            this.Shown += new System.EventHandler(this.SplashScreen_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,5 +82,6 @@ namespace Film
         #endregion
         private System.Windows.Forms.ProgressBar pbSplashscreen;
         private System.Windows.Forms.Label lbMovie;
+        private System.Windows.Forms.Timer timer1;
     }
 }

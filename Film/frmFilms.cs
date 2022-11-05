@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Film.SplashScreen;
 using static System.Net.WebRequestMethods;
 
 namespace Film
 {
+    /// <summary>
+    /// Nom: Mydleyka Dimanche
+    /// Devoir2
+    /// </summary>
     public partial class frmFilms : Form
     {
-        public static List<Film> films = Utilities.getMovieDbList();
-        int index = 0;
+        public static List<Film> films = SplashScreen.films;
+        public static int index = 0;
 
         public frmFilms()
         {
@@ -23,6 +28,14 @@ namespace Film
 
         private void frmFilms_Load(object sender, EventArgs e)
         {
+            if (Utilities.IsConnectedToInternet())
+            {
+                button1.BackColor = Color.Blue;
+            }
+            else
+            {
+                button1.BackColor = Color.Red;
+            }
             Film film = films.ElementAt(index);
             display_film();
             
@@ -40,10 +53,11 @@ namespace Film
             index++;
             display_film();
         }
-
+        /// <summary>
+        /// Display info film in the form
+        /// </summary>
         private void display_film()
         {
-           
                 Film film = films.ElementAt(index);
                 lbTitle.Text = film.title;
                 lbDescription.Text = film.overview;
@@ -69,6 +83,12 @@ namespace Film
             }
         }
 
-       
+        private void pbImageFilm_Click(object sender, EventArgs e)
+        {
+            frmFilmDetail filmDetail = new frmFilmDetail();
+            filmDetail.Show();
+            
+        }
+        
     }
 }

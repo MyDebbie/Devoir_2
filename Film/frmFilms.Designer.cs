@@ -34,13 +34,14 @@ namespace Film
             this.pbImageFilm = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbDescription = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageFilm)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPrevious
             // 
             this.btnPrevious.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPrevious.Location = new System.Drawing.Point(109, 505);
+            this.btnPrevious.Location = new System.Drawing.Point(96, 550);
             this.btnPrevious.Margin = new System.Windows.Forms.Padding(5);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(209, 67);
@@ -52,7 +53,7 @@ namespace Film
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNext.Location = new System.Drawing.Point(790, 505);
+            this.btnNext.Location = new System.Drawing.Point(790, 550);
             this.btnNext.Margin = new System.Windows.Forms.Padding(5);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(209, 67);
@@ -63,16 +64,17 @@ namespace Film
             // 
             // pbImageFilm
             // 
-            this.pbImageFilm.Location = new System.Drawing.Point(524, 109);
+            this.pbImageFilm.Location = new System.Drawing.Point(469, 121);
             this.pbImageFilm.Name = "pbImageFilm";
-            this.pbImageFilm.Size = new System.Drawing.Size(475, 261);
+            this.pbImageFilm.Size = new System.Drawing.Size(530, 323);
             this.pbImageFilm.TabIndex = 2;
             this.pbImageFilm.TabStop = false;
+            this.pbImageFilm.Click += new System.EventHandler(this.pbImageFilm_Click);
             // 
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
-            this.lbTitle.Location = new System.Drawing.Point(131, 109);
+            this.lbTitle.Location = new System.Drawing.Point(104, 145);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(73, 25);
             this.lbTitle.TabIndex = 3;
@@ -81,7 +83,7 @@ namespace Film
             // lbDescription
             // 
             this.lbDescription.AutoSize = true;
-            this.lbDescription.Location = new System.Drawing.Point(104, 215);
+            this.lbDescription.Location = new System.Drawing.Point(49, 262);
             this.lbDescription.MaximumSize = new System.Drawing.Size(400, 400);
             this.lbDescription.Name = "lbDescription";
             this.lbDescription.Padding = new System.Windows.Forms.Padding(6);
@@ -89,12 +91,24 @@ namespace Film
             this.lbDescription.TabIndex = 4;
             this.lbDescription.Text = "label1";
             // 
+            // button1
+            // 
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(924, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 38);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmFilms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1093, 682);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbDescription);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.pbImageFilm);
@@ -118,6 +132,7 @@ namespace Film
         private System.Windows.Forms.PictureBox pbImageFilm;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbDescription;
+        private System.Windows.Forms.Button button1;
     }
 }
 
